@@ -167,7 +167,6 @@ header .header-content {
 }
 header .header-content .header-content-inner {
   position: relative;
-  max-width: 500px;
   margin: 0 auto;
 }
 header .header-content .header-content-inner h1 {
