@@ -153,6 +153,7 @@ header {
   overflow-y: hidden;
   background: url("../img/bucket.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
   color: white;
 }
 header .header-content {
