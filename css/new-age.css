@@ -157,6 +157,7 @@ header {
   /* Chrome 10-25, Safari 5.1-6 */
   background: url("../img/bucket.jpg"), linear-gradient(to left, #7b4397, #dc2430);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-repeat: no-repeat;
   color: white;
 }
 header .header-content {
