@@ -249,9 +249,6 @@ section.download .badges .badge-link img {
     font-size: 70px;
   }
 }
-section.features .section-heading {
-  margin-bottom: 100px;
-}
 section.features .section-heading h2 {
   margin-top: 0;
 }
@@ -269,7 +266,6 @@ section.features .feature-item {
 }
 section.features .feature-item {
   text-align: center;
-  margin-bottom: 100px;
   overflow: hidden;
 }
 section.features .feature-item h3 {
