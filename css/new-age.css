@@ -261,7 +261,6 @@ section.features .section-heading p {
 }
 section.features .device-container,
 section.features .feature-item {
-  max-width: 300px;
   margin: 0 auto;
 }
 section.features .device-container {
@@ -288,7 +287,7 @@ section.features .feature-item i {
   -webkit-text-fill-color: transparent;
 }
 section.features .feature-item img {
-  height: 300px;
+  height: 400px;
   border-radius: 20px;
 }
 @media (min-width: 992px) {
