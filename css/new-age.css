@@ -162,7 +162,6 @@ header .header-content {
   position: relative;
 }
 header .header-content .header-content-inner {
-  position: relative;
   margin: 0 auto;
 }
 header .header-content .header-content-inner h1 {
@@ -276,6 +275,7 @@ section.features .device-container {
 section.features .feature-item {
   text-align: center;
   margin-bottom: 100px;
+  overflow: hidden;
 }
 section.features .feature-item h3 {
   font-size: 30px;
@@ -288,7 +288,7 @@ section.features .feature-item i {
   -webkit-text-fill-color: transparent;
 }
 section.features .feature-item img {
-  height: 100px;
+  height: 300px;
   border-radius: 20px;
 }
 @media (min-width: 992px) {
