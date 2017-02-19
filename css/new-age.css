@@ -262,9 +262,6 @@ section.features .device-container,
 section.features .feature-item {
   margin: 0 auto;
 }
-section.features .device-container {
-  margin-bottom: 100px;
-}
 @media (min-width: 992px) {
   section.features .device-container {
     margin-bottom: 0;
