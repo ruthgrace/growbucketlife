@@ -287,6 +287,10 @@ section.features .feature-item i {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+section.features .feature-item img {
+  height: 100px;
+  border-radius: 20px;
+}
 @media (min-width: 992px) {
   section.features .device-container,
   section.features .feature-item {
