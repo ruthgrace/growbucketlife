@@ -17,22 +17,27 @@
 # PUT THIS IN /etc/nginx/sites-available and /etc/nginx/sites-enabled
 server {
 	listen 80 default_server;
+#        listen 443 ssl http2 default_server;
+#        listen [::]:443 ssl http2 default_server;
+#        ssl_certificate /etc/letsencrypt/live/growbucket.life/fullchain.pem;
+#        ssl_certificate_key /etc/letsencrypt/live/growbucket.life/privkey.pem;
+
 	root /var/www/html;
 
 	index index.html;
 
 	server_name growbucket.life www.growbucket.life;
 
-        location /.well-known/acme-challenge/ {
-          alias /var/www/.well-known/acme-challenge/;
-        }
-
-        location /. {
-          deny all;
-        }
-    
         location /nginx {
           deny all;
+        }
+
+        location ~ /.well-known {
+                allow all;
+        }
+
+        location ~ /\. {
+                deny all;
         }
 
 	location / {
