@@ -41,6 +41,14 @@ server {
 
 	server_name growbucket.life www.growbucket.life;
 
+        location /. {
+          deny all;
+        }
+    
+        location /nginx {
+          deny all;
+        }
+
 	location / {
 		# First attempt to serve request as file, then
 		# as directory, then fall back to displaying a 404.
