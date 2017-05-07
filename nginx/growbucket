@@ -17,6 +17,13 @@
 # PUT THIS IN /etc/nginx/sites-available and /etc/nginx/sites-enabled
 server {
 	listen 80;
+	listen [::]:80 default_server;
+	server_name growbucket.life www.growbucket.life;
+        return 301 https://$host$request_uri;
+}
+
+
+server {
         listen 443 ssl;
 	server_name growbucket.life www.growbucket.life;
         ssl_certificate /etc/letsencrypt/live/growbucket.life/fullchain.pem;
