@@ -33,6 +33,9 @@ server {
 
 	index index.html;
 
+        location ~ /secret {
+          deny all;
+        }
 
         location /nginx {
           deny all;
