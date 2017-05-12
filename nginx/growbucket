@@ -15,6 +15,7 @@
 #
 
 # PUT THIS IN /etc/nginx/sites-available and /etc/nginx/sites-enabled
+
 server {
 	listen 80;
 	listen [::]:80 default_server;
