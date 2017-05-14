@@ -17,16 +17,10 @@
 # PUT THIS IN /etc/nginx/sites-available and /etc/nginx/sites-enabled
 
 server {
-    listen 80;
-    server_name growbucket.life www.growbucket.life;
-
-    location / {
-        proxy_set_header Host $http_host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-        proxy_pass http://unix:/var/www/html/growbucket.sock;
-    }
+	listen 80;
+	listen [::]:80 default_server;
+	server_name growbucket.life www.growbucket.life;
+        return 301 https://$host$request_uri;
 }
 
 server {
