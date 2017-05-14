@@ -66,7 +66,7 @@ def payment():
 
 @app.route('/checkout', methods = ['POST'])
 def checkout():
-    pass
+    return render_template('checkout.html')
 
 @app.route('/instructable')
 @app.route('/instructable.html')
