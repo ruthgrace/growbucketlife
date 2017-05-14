@@ -176,25 +176,7 @@
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <ul class="list-inline">
-                <li>
-                    <a href="http://growbucket.life/faq">FAQ</a>
-                </li>
-                <li>|</li>
-                <li>
-                    <a href="http://growbucket.life/documents">documents</a>
-                </li>
-                <li>|</li>
-                <li>
-                    <a href="https://medium.com/grow-bucket-life-project-kickstarter-diary">project diary</a>
-                </li>
-
-            </ul>
-        </div>
-    </footer>
-
+    {% include 'shared/footer.html' %}
     <!-- jQuery -->
     <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
 
