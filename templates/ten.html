@@ -44,7 +44,7 @@
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                     <div class="row">
-                        <h1>Payment</h1>
+                        <h1>Donate $10</h1>
                         <hr>
                     </div>
                     <div class="row">
@@ -65,7 +65,7 @@
                     <div class="row">
                         <div class="col-lg-6 col-lg-offset-3 text-center">
                             <div class="row">
-                                <div class="col-lg-6 text-center">{{ quantity }} x Grow Bucket Kit</div>
+                                <div class="col-lg-6 text-center">{{ quantity }} x $10 Grow Bucket Donation</div>
                                 <div class="col-lg-6 text-center">${{ cost }}</div>
                             </div>
                             <div class="row">
@@ -78,7 +78,7 @@
                             </div>
                         </div>
                     </div><br>
-                        <form action="/checkout" method="POST">
+                        <form action="/donate" method="POST">
                         <input type="hidden" name="stripetotal" value="{{ stripetotal }}">
                         <script
                           src="https://checkout.stripe.com/checkout.js" class="stripe-button"

@@ -44,53 +44,9 @@
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                     <div class="row">
-                        <h1>Payment</h1>
+                        <h1>Thank you for donating to Grow Bucket Life!</h1>
                         <hr>
                     </div>
-                    <div class="row">
-                        <form name="quantity" action="payment" method='POST'>
-                            <label>Quantity: </label>
-                            <select name="quantity">
-                                {% for q in quantities %}
-                                    {% if q == quantity %}
-                                        <option value="{{ q }}" selected>{{ q }}</option>
-                                    {% else %}
-                                        <option value="{{ q }}">{{ q }}</option>
-                                    {% endif %}
-                                {% endfor %}
-                            </select>
-                            <button type="submit">update</button>
-                        </form>
-                    </div><br>
-                    <div class="row">
-                        <div class="col-lg-6 col-lg-offset-3 text-center">
-                            <div class="row">
-                                <div class="col-lg-6 text-center">{{ quantity }} x Grow Bucket Kit</div>
-                                <div class="col-lg-6 text-center">${{ cost }}</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6 text-center">Tax (8.5%)</div>
-                                <div class="col-lg-6 text-center">${{ taxdollars }}.{{ taxcents }}</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6 text-center"><b>Total</b></div>
-                                <div class="col-lg-6 text-center"><b>${{ totaldollars }}.{{ totalcents }}</b></div>
-                            </div>
-                        </div>
-                    </div><br>
-                        <form action="/checkout" method="POST">
-                        <input type="hidden" name="stripetotal" value="{{ stripetotal }}">
-                        <script
-                          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                          data-key="{{ key }}"
-                          data-amount="{{ stripetotal }}"
-                          data-name="growbucket.life"
-                          data-description="2 widgets"
-                          data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-                          data-zip-code="true"
-                          data-locale="auto">
-                        </script>
-                        </form>
                 </div>
             </div>
         </div>
