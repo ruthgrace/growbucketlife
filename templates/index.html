@@ -36,6 +36,15 @@
     <![endif]-->
 
     {% include 'facebook_pixel.html' %}
+    <script>
+        window.onload = function() {
+          var a = document.getElementById("buy_form");
+          a.onclick = function() {
+            fbq('track', 'InitiateCheckout');
+            return true;
+          }
+        }
+    </script>
 
 </head>
 
@@ -147,7 +156,7 @@
             <div class="row">
                 <div class="col-lg-4 feature-item">
                     <h3>Buy</h3>
-                    <p class="text-muted">We are selling bucket kits for pick up in the San Francisco Mission for $50 plus tax. Fill out <a href="https://goo.gl/forms/wvaxGrYhhxgyD1143">this form</a> if you'd like to buy one.</p>
+                    <p class="text-muted">We are selling bucket kits for pick up in the San Francisco Mission for $50 plus tax. Fill out <a id="buy_form" href="https://goo.gl/forms/wvaxGrYhhxgyD1143">this form</a> if you'd like to buy one.</p>
                 </div>
                 <div class="col-lg-4 feature-item">
                     <h3>DIY</h3>
