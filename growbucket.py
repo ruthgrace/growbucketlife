@@ -25,11 +25,6 @@ def get_numbers(quantity, cost):
     numbers['stripetotal'] = numbers['totaldollars'] * 100 + numbers['totalcents']
     return numbers
 
-# challenge files for renewing grow bucket SSL cert
-@app.route('/.well-known/<path:path>')
-def send_js(path):
-    return send_from_directory('.well0known', path)
-
 @app.route('/')
 def home():
     return render_template('index.html')
