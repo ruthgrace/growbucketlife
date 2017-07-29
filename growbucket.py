@@ -1,7 +1,7 @@
 import logging
 import stripe
 from logging.handlers import RotatingFileHandler
-from flask import Flask, render_template, redirect, request
+from flask import Flask, render_template, redirect, request, send_from_directory
 from config import testkey, prodkey, testsecretkey, prodsecretkey
 
 KEY = prodkey
@@ -24,6 +24,11 @@ def get_numbers(quantity, cost):
     numbers['totaldollars'] = numbers['taxdollars'] + numbers['cost']
     numbers['stripetotal'] = numbers['totaldollars'] * 100 + numbers['totalcents']
     return numbers
+
+# challenge files for renewing grow bucket SSL cert
+@app.route('/.well-known/<path:path>')
+def send_js(path):
+    return send_from_directory('.well0known', path)
 
 @app.route('/')
 def home():
