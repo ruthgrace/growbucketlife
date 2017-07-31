@@ -3,5 +3,5 @@ vendor
 config.py
 *.sock
 *.pyc
-templates/facebook_pixel.html
+templates/*facebook_pixel.html
 .well-known
