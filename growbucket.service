@@ -5,7 +5,7 @@ After=network.target
 [Service]
 User=www-data
 Group=www-data
-WorkingDirectory=/var/www/html
+WorkingDirectory=/var/www/growbucket
 ExecStart=/usr/local/bin/gunicorn --workers 3 --bind unix:growbucket.sock -m 007 wsgi:app
 
 [Install]
