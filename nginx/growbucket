@@ -19,7 +19,7 @@
 server {
 	listen 80;
         listen [::]:80;
-	server_name growbucket.life www.growbucket.life;
+	server_name growbucket.ruthgracewong.com www.growbucket.ruthgracewong.com;
 
         location ~ /.well-known {
             root /var/www/growbucket;
@@ -32,9 +32,9 @@ server {
 
 server {
         listen 443 ssl;
-	server_name growbucket.life www.growbucket.life;
-        ssl_certificate /etc/letsencrypt/live/www.growbucket.life/fullchain.pem;
-        ssl_certificate_key /etc/letsencrypt/live/www.growbucket.life/privkey.pem;
+	server_name growbucket.ruthgracewong.com www.growbucket.ruthgracewong.com;
+        ssl_certificate /etc/letsencrypt/live/www.growbucket.ruthgracewong.com/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/www.growbucket.ruthgracewong.com/privkey.pem;
 
         location ~ /static {
             root /var/www/growbucket;
